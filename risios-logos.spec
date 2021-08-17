@@ -1,6 +1,6 @@
 Name:       risios-logos
 Version:    18.0.0
-Release:    4%{?dist}
+Release:    5%{?dist}
 Summary:    Icons and pictures
 
 Group:      	System Environment/Base
@@ -111,7 +111,7 @@ rm -rf %{buildroot}
 %{_datadir}/firstboot/themes/*
 %{_datadir}/anaconda/boot/*
 %{_datadir}/anaconda/pixmaps/*
-%{_datadir}/icons/Fedora/*/apps/*
+%{_datadir}/icons/hicolor/*/apps/*
 %{_datadir}/pixmaps/*
 %exclude %{_datadir}/pixmaps/poweredby.png
 %{_datadir}/plymouth/themes/charge/*
