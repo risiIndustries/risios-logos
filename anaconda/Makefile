@@ -18,8 +18,8 @@ install:
 	mkdir -p $(DESTDIR)/$(ANACONDABOOTDIR)
 	mkdir -p $(DESTDIR)/$(ANACONDADATADIR)/pixmaps
 	install -m 644 anaconda_header.png $(DESTDIR)/$(ANACONDADATADIR)/pixmaps
-	install -m 644 progress_first.png $(DESTDIR)/$(ANACONDADATADIR)/pixmaps
-	install -m 644 splash.png $(DESTDIR)/$(ANACONDADATADIR)/pixmaps
+	# install -m 644 progress_first.png $(DESTDIR)/$(ANACONDADATADIR)/pixmaps
+	# install -m 644 splash.png $(DESTDIR)/$(ANACONDADATADIR)/pixmaps
 
 	install -m 644 syslinux-splash.png $(DESTDIR)/$(ANACONDABOOTDIR)/syslinux-splash.png
 	install -m 644 syslinux-vesa-splash.png $(DESTDIR)/$(ANACONDABOOTDIR)/splash.png
