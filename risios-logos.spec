@@ -1,11 +1,11 @@
 Name:       risios-logos
 Version:    18.0.0
-Release:    1%{?dist}
+Release:    2%{?dist}
 Summary:    Icons and pictures
 
 Group:      	System Environment/Base
-URL:        	https://fedorahosted.org/generic-logos/ 
-Source0:    	https://fedorahosted.org/released/%{name}/%{name}-%{version}.tar.bz2
+URL:        	https://github.com/risiOS/risios-logos/blob/main/risios-logos.spec
+Source0:    	https://github.com/risiOS/risios-logos/
 License:    	GPLv2 and LGPLv2+
 BuildRoot:  	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:  	noarch
