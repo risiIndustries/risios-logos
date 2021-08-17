@@ -25,7 +25,7 @@ BuildRequires: libicns-utils
 Requires(post): coreutils
 
 %description
-The generic-logos package contains various image files which can be
+The risios-logos package contains various image files which can be
 used by the bootloader, anaconda, and other related tools. It can
 be used as a replacement for the fedora-logos package, if you are
 unable for any reason to abide by the trademark restrictions on the
@@ -39,7 +39,7 @@ Obsoletes:  generic-logos < 17.0.0-5
 BuildArch: noarch
 
 %description httpd
-The generic-logos-httpd package contains image files which can be used by
+The risios-logos-httpd package contains image files which can be used by
 httpd.
 
 %prep
@@ -50,9 +50,9 @@ make
 %install
 rm -rf %{buildroot}
 
-mkdir -p %{buildroot}%{_datadir}/firstboot/themes/generic
+mkdir -p %{buildroot}%{_datadir}/firstboot/themes/risios
 for i in firstboot/* ; do
-  install -p -m 644 $i %{buildroot}%{_datadir}/firstboot/themes/generic
+  install -p -m 644 $i %{buildroot}%{_datadir}/firstboot/themes/risios
 done
 
 mkdir -p %{buildroot}%{_datadir}/pixmaps/bootloader
@@ -73,8 +73,8 @@ done
 # File or directory names do not count as trademark infringement
 mkdir -p %{buildroot}%{_datadir}/icons/hicolor/48x48/apps/
 mkdir -p %{buildroot}%{_datadir}/icons/hicolor/scalable/apps/
-install -p -m 644 icons/hicolor/48x48/apps/* %{buildroot}%{_datadir}/icons/Fedora/48x48/apps/
-install	-p -m 644 icons/hicolor/scalable/apps/* %{buildroot}%{_datadir}/icons/Fedora/scalable/apps/
+install -p -m 644 icons/hicolor/48x48/apps/* %{buildroot}%{_datadir}/icons/hicolor/48x48/apps/
+install	-p -m 644 icons/hicolor/scalable/apps/* %{buildroot}%{_datadir}/icons/hicolor/scalable/apps/
 
 (cd anaconda; make DESTDIR=%{buildroot} install)
 
@@ -83,7 +83,6 @@ install	-p -m 644 icons/hicolor/scalable/apps/* %{buildroot}%{_datadir}/icons/Fe
 
 %post
 touch --no-create %{_datadir}/icons/hicolor || :
-touch --no-create %{_kde4_iconsdir}/oxygen ||:
 
 %postun
 if [ $1 -eq 0 ] ; then
