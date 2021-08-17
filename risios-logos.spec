@@ -10,6 +10,7 @@ License:    	GPLv2 and LGPLv2+
 BuildRoot:  	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:  	noarch
 BuildRequires: 	make
+BuildRequires: 	hardlink
 
 Obsoletes:  redhat-logos
 Obsoletes:  generic-logos < 17.0.0-5
