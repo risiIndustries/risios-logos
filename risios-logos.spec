@@ -9,8 +9,6 @@ Source0:    	https://github.com/risiOS/risios-logos/archive/refs/heads/main.tar.
 License:    	GPLv2 and LGPLv2+
 BuildRoot:  	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:  	noarch
-BuildRequires: 	make
-BuildRequires: 	hardlink
 
 Obsoletes:  redhat-logos
 Obsoletes:  generic-logos < 17.0.0-5
@@ -21,6 +19,7 @@ Conflicts:  fedora-logos
 Conflicts:  anaconda-images <= 10
 Conflicts:  redhat-artwork <= 5.0.5
 BuildRequires: hardlink
+BuildRequires: 	make
 # For generating the EFI icon
 BuildRequires: libicns-utils
 Requires(post): coreutils
@@ -80,7 +79,7 @@ install	-p -m 644 icons/hicolor/scalable/apps/* %{buildroot}%{_datadir}/icons/hi
 (cd anaconda; make DESTDIR=%{buildroot} install)
 
 # save some dup'd icons
-/usr/sbin/hardlink -v %{buildroot}/
+hardlink -v %{buildroot}/
 
 %post
 touch --no-create %{_datadir}/icons/hicolor || :
