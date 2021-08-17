@@ -1,15 +1,15 @@
-Name:       generic-logos
+Name:       risios-logos
 Version:    18.0.0
 Release:    1%{?dist}
 Summary:    Icons and pictures
 
-Group:      System Environment/Base
-URL:        https://fedorahosted.org/generic-logos/ 
-Source0:    https://fedorahosted.org/released/%{name}/%{name}-%{version}.tar.bz2
-#The KDE Logo is under a LGPL license (no version statement)
-License:    GPLv2 and LGPLv2+
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-BuildArch:  noarch
+Group:      	System Environment/Base
+URL:        	https://fedorahosted.org/generic-logos/ 
+Source0:    	https://fedorahosted.org/released/%{name}/%{name}-%{version}.tar.bz2
+License:    	GPLv2 and LGPLv2+
+BuildRoot:  	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
+BuildArch:  	noarch
+BuildRequires: 	make
 
 Obsoletes:  redhat-logos
 Obsoletes:  generic-logos < 17.0.0-5
