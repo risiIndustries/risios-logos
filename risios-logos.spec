@@ -1,6 +1,6 @@
 Name:       risios-logos
 Version:    18.0.0
-Release:    2%{?dist}
+Release:    4%{?dist}
 Summary:    Icons and pictures
 
 Group:      	System Environment/Base
@@ -87,7 +87,6 @@ touch --no-create %{_datadir}/icons/hicolor || :
 %postun
 if [ $1 -eq 0 ] ; then
 touch --no-create %{_datadir}/icons/hicolor || :
-touch --no-create %{_kde4_iconsdir}/oxygen ||:
 if [ -x /usr/bin/gtk-update-icon-cache ]; then
   if [ -f %{_datadir}/icons/hicolor/index.theme ]; then
     gtk-update-icon-cache --quiet %{_datadir}/icons/hicolor || :
@@ -108,7 +107,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
-%doc COPYING COPYING-kde-logo README
+%doc COPYING README
 %{_datadir}/firstboot/themes/*
 %{_datadir}/anaconda/boot/*
 %{_datadir}/anaconda/pixmaps/*
