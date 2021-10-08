@@ -1,6 +1,6 @@
 Name:       risios-logos
 Version:    18.0.0
-Release:    6%{?dist}
+Release:    7%{?dist}
 Summary:    Icons and pictures
 
 Group:      	System Environment/Base
