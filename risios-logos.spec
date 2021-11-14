@@ -78,6 +78,11 @@ install	-p -m 644 icons/hicolor/scalable/apps/* %{buildroot}%{_datadir}/icons/hi
 
 (cd anaconda; make DESTDIR=%{buildroot} install)
 
+# Plymouth logo
+# The Plymoth spinner theme Fedora logo bits
+mkdir -p $RPM_BUILD_ROOT%{_datadir}/plymouth/themes/spinner
+install -p -m 644 pixmaps/fedora-gdm-logo.png $RPM_BUILD_ROOT%{_datadir}/plymouth/themes/spinner/watermark.png
+
 # save some dup'd icons
 hardlink -v %{buildroot}/
 
