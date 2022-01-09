@@ -5,7 +5,7 @@ Summary:    Icons and pictures
 
 Group:      	System Environment/Base
 URL:        	https://github.com/risiOS/risios-logos/
-Source0:    	https://github.com/risiOS/risios-logos/archive/refs/heads/main.tar.xz
+Source0:    	https://github.com/risiOS/risios-logos/archive/refs/heads/main.tar.gz
 License:    	GPLv2 and LGPLv2+
 BuildRoot:  	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:  	noarch
