@@ -43,7 +43,7 @@ The risios-logos-httpd package contains image files which can be used by
 httpd.
 
 %prep
-%autosetup
+%autosetup -n risios-logos-main
 %build
 make
 
