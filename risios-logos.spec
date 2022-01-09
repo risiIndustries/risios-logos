@@ -14,6 +14,7 @@ Obsoletes:  redhat-logos
 Obsoletes:  generic-logos < 17.0.0-5
 Provides:   redhat-logos = %{version}-%{release}
 Provides:   system-logos = %{version}-%{release}
+Provides:   fedora-logos
 
 Conflicts:  fedora-logos
 Conflicts:  anaconda-images <= 10
@@ -118,8 +119,9 @@ rm -rf %{buildroot}
 %{_datadir}/anaconda/pixmaps/*
 %{_datadir}/icons/hicolor/*/apps/*
 %{_datadir}/pixmaps/*
-%exclude %{_datadir}/pixmaps/poweredby.png
 %{_datadir}/plymouth/themes/charge/*
+%{_datadir}/plymouth/themes/spinner/watermark.png
+%exclude %{_datadir}/pixmaps/poweredby.png
 
 %files httpd
 %doc COPYING
