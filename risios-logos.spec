@@ -44,7 +44,7 @@ The risios-logos-httpd package contains image files which can be used by
 httpd.
 
 %prep
-%setup -q
+%autosetup
 %build
 make
 
