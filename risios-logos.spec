@@ -1,6 +1,6 @@
 Name:       risios-logos
-Version:    18.0.1
-Release:    7%{?dist}
+Version:    18.0.2
+Release:    8%{?dist}
 Summary:    Icons and pictures
 
 Group:      	System Environment/Base
@@ -73,8 +73,10 @@ done
 # File or directory names do not count as trademark infringement
 mkdir -p %{buildroot}%{_datadir}/icons/hicolor/48x48/apps/
 mkdir -p %{buildroot}%{_datadir}/icons/hicolor/scalable/apps/
+mkdir -p %{buildroot}%{_datadir}/icons/hicolor/symbolic/apps/
 install -p -m 644 icons/hicolor/48x48/apps/* %{buildroot}%{_datadir}/icons/hicolor/48x48/apps/
 install	-p -m 644 icons/hicolor/scalable/apps/* %{buildroot}%{_datadir}/icons/hicolor/scalable/apps/
+install	-p -m 644 icons/hicolor/symbolic/apps/* %{buildroot}%{_datadir}/icons/hicolor/symbolic/apps/
 
 (cd anaconda; make DESTDIR=%{buildroot} install)
 
