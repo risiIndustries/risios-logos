@@ -1,5 +1,5 @@
 Name:       risios-logos
-Version:    18.0.2
+Version:    18.0.3
 Release:    8%{?dist}
 Summary:    Icons and pictures
 
