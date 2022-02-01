@@ -84,6 +84,8 @@ install	-p -m 644 icons/hicolor/symbolic/apps/* %{buildroot}%{_datadir}/icons/hi
 # The Plymoth spinner theme Fedora logo bits
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/plymouth/themes/spinner
 install -p -m 644 pixmaps/fedora-gdm-logo.png $RPM_BUILD_ROOT%{_datadir}/plymouth/themes/spinner/watermark.png
+mkdir -p $RPM_BUILD_ROOT%{_datadir}/plymouth/themes/risi-spinner
+install -p -m 644 pixmaps/fedora-gdm-logo.png $RPM_BUILD_ROOT%{_datadir}/plymouth/themes/risi-spinner/watermark.png
 
 # save some dup'd icons
 hardlink -v %{buildroot}/
@@ -122,6 +124,7 @@ rm -rf %{buildroot}
 %{_datadir}/pixmaps/*
 %{_datadir}/plymouth/themes/charge/*
 %{_datadir}/plymouth/themes/spinner/watermark.png
+%{_datadir}/plymouth/themes/risi-spinner/watermark.png
 %exclude %{_datadir}/pixmaps/poweredby.png
 
 %files httpd
